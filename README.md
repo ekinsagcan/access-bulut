@@ -37,4 +37,25 @@ Windows giriş: kullanıcı `Ogrenci`, şifre `access` (otomatik giriş yapıyor
 
 ---
 
+# Alternatif: Kendi Mac'ine kur (UTM)
+
+Bulut yerine Windows'u kendi Mac'inde çalıştırmak istersen (saat sınırı yok, daha hızlı, internetsiz de açılır). Sadece **M1/M2/M3/M4** Mac'lerde çalışır ve **en az 37 GB boş yer** ister.
+
+1. **Terminal**'i aç (Spotlight: ⌘ + Boşluk → "Terminal").
+2. Şu satırı yapıştır, Enter'a bas:
+
+   ```bash
+   curl -fsSL https://raw.githubusercontent.com/ekinsagcan/access-bulut/main/mac/Access-Kur.command | bash
+   ```
+
+3. Mac "Terminal, UTM'i denetlemek istiyor" derse **İzin Ver**.
+4. Microsoft'un sayfası açılınca: *Windows 11 (Arm64 için çok sürümlü ISO)* → İndir → **Türkçe** → Onayla → İndir (~6 GB).
+   Windows dosyası zaten İndirilenler klasöründeyse bu adım atlanır.
+5. İndirme bitince her şey kendiliğinden devam eder: UTM'de Windows kurulur, sonra Word, Excel ve Access yüklenir (45–60 dk). Mac'i şarja tak, kapatma.
+6. Sonraki açılışlar: Mac masaüstündeki **Windows (Access)** simgesine çift tıkla.
+
+Kurulum kaydı: `~/Access-Windows/kurulum.log`. Windows dosyası (İndirilenler'deki `.iso`) kurulumdan sonra **silinmemeli**; silinirse Windows yine açılır ama UTM bir uyarı gösterebilir.
+
+---
+
 Teknik: [dockur/windows](https://github.com/dockur/windows) + GitHub Codespaces. Windows lisanssız (deneme) modda çalışır; Office lisansı okulun Microsoft 365 hesabından gelir.
