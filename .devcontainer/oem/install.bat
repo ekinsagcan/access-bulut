@@ -9,7 +9,6 @@ echo  Bu pencereyi KAPATMA, bitince kendisi kapanacak.
 echo.
 
 powercfg /h off
-compact /compactos:always
 
 set ODT=C:\OEM\setup.exe
 set TRIES=0
@@ -27,6 +26,8 @@ goto download
 set ACCESS=C:\Program Files\Microsoft Office\root\Office16\MSACCESS.EXE
 if not exist "%ACCESS%" goto failed
 powershell -NoProfile -ExecutionPolicy Bypass -Command "$s=(New-Object -ComObject WScript.Shell).CreateShortcut('C:\Users\Public\Desktop\Access.lnk'); $s.TargetPath='%ACCESS%'; $s.Save()"
+echo Disk alani icin Windows sikistiriliyor (Access simdiden kullanilabilir)...
+compact /compactos:always
 exit /b 0
 
 :failed
