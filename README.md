@@ -7,11 +7,13 @@ Tarayıcıdan açılan, içinde Word, Excel ve **Microsoft Access** kurulu bir W
 ## İlk açılış (bir kere, ~45 dakika)
 
 1. Ücretsiz bir GitHub hesabı aç: <https://github.com/signup>
-2. Yukarıdaki **"Open in GitHub Codespaces"** butonuna bas → **Create codespace**.
-3. Bekle. Windows bulutta kendi kendine kuruluyor. Bir süre sonra yeni bir sekmede Windows ekranı açılır.
+2. **Önemli:** <https://github.com/settings/codespaces> → **Default idle timeout** kutusuna `240` yaz → **Save**.
+   Yoksa GitHub 30 dakika sonra "kimse kullanmıyor" sanıp Windows'u kapatıyor (kurulum yarıda kalır, ödev yaparken de kapanır).
+3. Yukarıdaki **"Open in GitHub Codespaces"** butonuna bas → **Create codespace**.
+4. Bekle. Windows bulutta kendi kendine kuruluyor. Bir süre sonra yeni bir sekmede Windows ekranı açılır.
    - Sekme açılmazsa: alttaki **PORTS** sekmesi → `Windows (8006)` satırındaki 🌐 simgesine bas.
    - Ekranda "Office kuruluyor" penceresi görünecek. Kapatma, bitince kendisi kapanır.
-4. Masaüstündeki **Access** simgesine çift tıkla → okul hesabınla giriş yap: `öğrencino@emu.edu.tr` + öğrenci portalı şifresi.
+5. Masaüstündeki **Access** simgesine çift tıkla → okul hesabınla giriş yap: `öğrencino@emu.edu.tr` + öğrenci portalı şifresi.
 
 ## Sonraki açılışlar (~1 dakika)
 
