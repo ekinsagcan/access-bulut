@@ -1,0 +1,16 @@
+{
+  "name": "Access (Windows 11)",
+  "service": "windows",
+  "dockerComposeFile": "codespaces.yml",
+  "initializeCommand": "docker system prune --all --force",
+  "forwardPorts": [8006],
+  "portsAttributes": {
+    "8006": {
+      "label": "Windows",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "otherPortsAttributes": {
+    "onAutoForward": "ignore"
+  }
+}

@@ -1,0 +1,31 @@
+# Windows 11 in GitHub Codespaces, based on dockur/windows' own Codespaces setup.
+# The Windows disk lives in ./windows (inside the codespace's persistent workspace),
+# so it survives the codespace stopping and starting again.
+services:
+  windows:
+    container_name: windows
+    image: ghcr.io/dockur/windows
+    environment:
+      VERSION: "11"
+      LANGUAGE: "Turkish"
+      REGION: "tr-TR"
+      KEYBOARD: "tr-TR"
+      USERNAME: "Ogrenci"
+      PASSWORD: "access"
+      RAM_SIZE: "half"
+      CPU_CORES: "max"
+      DISK_SIZE: "max"
+      DISK_MINIMUM: "1G"
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+    volumes:
+      - ./windows:/storage
+      - ./oem:/oem
+      - ../Dosyalar:/shared
+    restart: on-failure
+    stop_grace_period: 2m
